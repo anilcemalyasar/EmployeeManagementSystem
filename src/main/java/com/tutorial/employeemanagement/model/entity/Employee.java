@@ -35,9 +35,9 @@ public class Employee {
     @Column(name = "email_id", nullable = false, unique = true)
     private String email;
 
-//    @Column(name = "photo")
-//    @Lob
-//    private Blob photo;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "imageId")
+    private Image image;
 
     @Column(name = "is_deleted")
     private boolean isDeleted = false;
