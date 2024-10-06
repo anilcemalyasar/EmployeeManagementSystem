@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.SQLRestriction;
-import org.hibernate.annotations.Where;
-
-import java.sql.Blob;
 
 @Getter
 @Setter
@@ -16,7 +13,7 @@ import java.sql.Blob;
 @AllArgsConstructor
 @Entity
 @Table(name = "employees")
-@SQLRestriction("isDeleted <> true")
+@SQLRestriction("is_deleted <> true")
 public class Employee {
 
     @Id
